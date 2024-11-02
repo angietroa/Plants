@@ -1,0 +1,19 @@
+<div class="my-4">
+  <table class="table">
+    <thead class="table-dark">
+      <tr>
+        <th *ngFor="let header of tableHeader">
+          {{ header }}
+        </th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+      <tr *ngFor="let plant of plants">
+        <th scope="row">{{ plant.id }}</th>
+        <td>{{ plant.nombre_comun }}</td>
+        <td>{{ plant.tipo }}</td>
+        <td>{{ plant.clima }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
