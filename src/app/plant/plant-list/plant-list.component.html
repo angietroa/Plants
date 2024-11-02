@@ -1,4 +1,20 @@
 <div class="my-4">
+  <section class="d-flex row mb-3 g-2">
+    <div *ngFor="let plantTotal of plantTotals" class="col-12 col-md-6">
+      <div class="d-flex gap-2 align-items-center">
+        <img
+          [src]="plantTotal.icon"
+          alt="{{ plantTotal.label }}"
+          class="icon"
+        />
+        <p class="mb-0">
+          {{ plantTotal.label }}:
+          <b>{{ plantTotal.total }}</b>
+        </p>
+      </div>
+    </div>
+  </section>
+
   <table class="table">
     <thead class="table-dark">
       <tr>
